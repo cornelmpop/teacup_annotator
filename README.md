@@ -1,4 +1,5 @@
 # Teacup Annotator
+[![Tests](https://github.com/cornelmpop/teacup_annotator/actions/workflows/tests.yml/badge.svg)](https://github.com/cornelmpop/teacup_annotator/actions/workflows/tests.yml)
 
 Teacup Annotator is a cross-platform, lightweight desktop image annotation tool
 with support for creating, editing, classifying, and auditing manual or
