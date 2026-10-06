@@ -37,6 +37,10 @@ jobs:
         with:
           enable-cache: true
           python-version: "3.12"
+      - name: Install Tkinter
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3-tk
       - name: Verify dependency lock
         run: uv lock --check
       - name: Build source distribution
@@ -103,6 +107,11 @@ jobs:
         with:
           enable-cache: true
           python-version: ${{ matrix.python-version }}
+      - name: Install Tkinter for system Python
+        if: matrix.python-version == '3.12'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3-tk
       - name: Verify dependency lock
         run: uv lock --check
       - name: Install test environment
