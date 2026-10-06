@@ -1,0 +1,51 @@
+setup
+  fixture ../../fixtures/master_2
+  window 1200x760 canvas 762x642
+  prefs annotation_methodology= author_email= author_name= author_primary_affiliation=
+  prefs autoclose_enabled=false 'class_colours=#0f766e' collection_methodology= data_license=
+  prefs dataset_identifier= dataset_version= default_class=object 'image_folder=<fixture>'
+  prefs key_binding_autoclose=w key_binding_cancel=c key_binding_change_class=c key_binding_delete_annotation=d
+  prefs key_binding_delete_vertices=d key_binding_draw_arrow=a key_binding_flag_review=f key_binding_merge_annotation=m
+  prefs key_binding_multi_select=x key_binding_new_annotation=n key_binding_new_polygon=q key_binding_new_rectangle=r
+  prefs key_binding_simplify_polygon=s key_binding_undo=u 'last_image_folder=<fixture>' last_image_index=
+  prefs last_image_name= live_lines=true model_access_and_license= model_identifier=
+  prefs model_weights= 'overlapping_edge_colour=#7c3aed' overlapping_edge_width=3 prefs_version=1.9.4
+  prefs project_description= project_name= quality_control_methodology= reverse_horizontal_wheel=false
+  prefs 'selected_shared_edge_colour=#7dd3fc' show_labels=false show_overlapping_edges=false show_vertex_ids=true
+  prefs simplify_vertex_count=100 simplify_vertex_distance_px=7 snap_edits_enabled=false 'snap_live_line_colour=#16a34a'
+  prefs snap_new_enabled=false snapping_tolerance_px=5 source_image_origin= source_image_rights=
+  prefs write_json_backups=true
+
+session
+  dialog askokcancel 'Open last folder' -> ok
+  dialog local_class_source 'Choose annotation classes' -> defaults
+  dialog askyesno 'Use model.conf?' -> yes
+  loaded 'folder=<fixture>' images=9 index=0 'classes=[lithics,table,figure_caption]' annotations=5
+  submit viewer.image_index_entry 2 -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=1 annotations=0 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  click viewer.canvas left image 36.906332,22.55387 -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=1 annotations=0 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  command start_polygon -> mode=new temp_vertices=0 temp_arrow=none zoom=0.487721 index=1 annotations=0 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  new_polygon_point viewer.canvas image 38.956684,24.604222 -> mode=new temp_vertices=1 temp_arrow=none zoom=0.487721 index=1 annotations=0 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  new_polygon_point viewer.canvas image 654.062225,24.604222 -> mode=new temp_vertices=2 temp_arrow=none zoom=0.487721 index=1 annotations=0 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  new_polygon_point viewer.canvas image 652.011873,284.998901 -> mode=new temp_vertices=3 temp_arrow=none zoom=0.487721 index=1 annotations=0 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  new_polygon_point viewer.canvas image 38.956684,289.099604 -> mode=new temp_vertices=4 temp_arrow=none zoom=0.487721 index=1 annotations=0 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  new_polygon_point viewer.canvas image 43.057388,26.654573 -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=1 annotations=1 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=1 undo_depth=1 audit_queue=0
+  click viewer.canvas left image 317.804529,161.977792 -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=1 annotations=1 arrows=0 selected=0 'selected_regions=[0]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=1 undo_depth=1 audit_queue=0
+  drag viewer.canvas left image 652.011873,28.704925 to 676.616095,28.704925 via '[654.062225,28.704925;656.112577,28.704925;658.162929,28.704925;660.213281,28.704925;662.263632,28.704925;664.313984,28.704925;666.364336,28.704925;668.414688,28.704925;670.46504,28.704925;672.515391,28.704925;674.565743,28.704925;676.616095,28.704925]' -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=1 annotations=1 arrows=0 selected=0 'selected_regions=[0]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=1 undo_depth=2 audit_queue=0
+  menu viewer.canvas right image 350.610158,127.121812 snapshot=menu_001
+  choose table -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=1 annotations=1 arrows=0 selected=0 'selected_regions=[0]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=1 undo_depth=3 audit_queue=0
+  menu viewer.canvas right image 350.610158,153.776385 snapshot=menu_002
+  choose 'Resample outline' -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=1 annotations=1 arrows=0 selected=0 'selected_regions=[0]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=1 undo_depth=4 audit_queue=0
+  hover toolbar.load_button enter
+  hover toolbar.load_button leave
+  hover toolbar.load_button enter
+  hover toolbar.load_button leave
+  hover toolbar.run_button enter
+  hover toolbar.run_button leave
+  hover toolbar.save_button enter
+  invoke toolbar.save_button -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=1 annotations=1 arrows=0 selected=0 'selected_regions=[0]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=4 audit_queue=0
+  hover toolbar.save_button leave
+  hover toolbar.run_button enter
+  hover toolbar.run_button leave
+  close -> closed=1 in_transaction=0
+
+expect

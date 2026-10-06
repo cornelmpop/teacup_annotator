@@ -1,0 +1,59 @@
+setup
+  fixture ../../fixtures/master_2
+  window 1200x760 canvas 762x642
+  prefs annotation_methodology= author_email= author_name= author_primary_affiliation=
+  prefs autoclose_enabled=false 'class_colours=#0f766e' collection_methodology= data_license=
+  prefs dataset_identifier= dataset_version= default_class=object 'image_folder=<fixture>'
+  prefs key_binding_autoclose=w key_binding_cancel=c key_binding_change_class=c key_binding_delete_annotation=d
+  prefs key_binding_delete_vertices=d key_binding_draw_arrow=a key_binding_flag_review=f key_binding_merge_annotation=m
+  prefs key_binding_multi_select=x key_binding_new_annotation=n key_binding_new_polygon=q key_binding_new_rectangle=r
+  prefs key_binding_simplify_polygon=s key_binding_undo=u 'last_image_folder=<fixture>' last_image_index=
+  prefs last_image_name= live_lines=true model_access_and_license= model_identifier=
+  prefs model_weights= 'overlapping_edge_colour=#7c3aed' overlapping_edge_width=3 prefs_version=1.9.4
+  prefs project_description= project_name= quality_control_methodology= reverse_horizontal_wheel=false
+  prefs 'selected_shared_edge_colour=#7dd3fc' show_labels=false show_overlapping_edges=false show_vertex_ids=true
+  prefs simplify_vertex_count=100 simplify_vertex_distance_px=7 snap_edits_enabled=false 'snap_live_line_colour=#16a34a'
+  prefs snap_new_enabled=false snapping_tolerance_px=5 source_image_origin= source_image_rights=
+  prefs write_json_backups=true
+
+session
+  dialog askokcancel 'Open last folder' -> ok
+  dialog local_class_source 'Choose annotation classes' -> defaults
+  dialog askyesno 'Use model.conf?' -> yes
+  loaded 'folder=<fixture>' images=9 index=0 'classes=[lithics,table,figure_caption]' annotations=5
+  click viewer.canvas left image 369.063325,106.618294 -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=0 annotations=5 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  zoom viewer.canvas in image 369.063325,106.618294 -> mode=none temp_vertices=0 temp_arrow=none zoom=0.560879 index=0 annotations=5 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  zoom viewer.canvas in image 369.063325,161.353772 -> mode=none temp_vertices=0 temp_arrow=none zoom=0.645011 index=0 annotations=5 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  zoom viewer.canvas in image 368.985807,179.841822 -> mode=none temp_vertices=0 temp_arrow=none zoom=0.741763 index=0 annotations=5 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  zoom viewer.canvas in image 369.390248,179.302566 -> mode=none temp_vertices=0 temp_arrow=none zoom=0.853027 index=0 annotations=5 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  scroll viewer.canvas vertical 1 image 369.273019,179.361181 -> mode=none temp_vertices=0 temp_arrow=none zoom=0.853027 index=0 annotations=5 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  scroll viewer.canvas vertical 1 image 369.273019,239.148241 -> mode=none temp_vertices=0 temp_arrow=none zoom=0.853027 index=0 annotations=5 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  hover toolbar.filter_button enter
+  hover toolbar.filter_button leave
+  hover toolbar.view_flagged_button enter
+  hover toolbar.view_flagged_button leave
+  hover toolbar.delete_image_button enter
+  hover toolbar.delete_image_button leave
+  hover toolbar.reset_zoom_button enter
+  invoke toolbar.reset_zoom_button -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=0 annotations=5 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  hover toolbar.reset_zoom_button leave
+  invoke controls.show_labels_check -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=0 annotations=5 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  invoke controls.show_overlapping_edges_check -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=0 annotations=5 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  resize window 1237x857 canvas 799x739 -> window=1237x857 canvas=799x739
+  invoke controls.snap_new_check -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=0 annotations=5 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  invoke controls.snap_edits_check -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=0 annotations=5 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  invoke controls.autoclose_check -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=0 annotations=5 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  dialog showinfo 'Turtle shell mode' -> ok
+  invoke controls.autoclose_check -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=0 annotations=5 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  invoke controls.show_labels_check -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=0 annotations=5 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  invoke controls.show_overlapping_edges_check -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=0 annotations=5 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  invoke controls.snap_new_check -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=0 annotations=5 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  invoke controls.snap_edits_check -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=0 annotations=5 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  hover toolbar.save_button enter
+  invoke toolbar.save_button -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=0 annotations=5 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  hover toolbar.save_button leave
+  hover toolbar.run_button enter
+  hover toolbar.run_button leave
+  close -> closed=1 in_transaction=0
+
+expect

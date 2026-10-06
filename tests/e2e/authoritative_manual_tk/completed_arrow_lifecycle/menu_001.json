@@ -1,0 +1,82 @@
+[
+  {
+    "label": "Undo last action",
+    "state": "normal",
+    "type": "command"
+  },
+  {
+    "accelerator": "n",
+    "entries": [
+      {
+        "accelerator": "q",
+        "label": "polygon",
+        "state": "normal",
+        "type": "command"
+      },
+      {
+        "accelerator": "r",
+        "label": "rectangle",
+        "state": "normal",
+        "type": "command"
+      }
+    ],
+    "label": "New annotation",
+    "state": "normal",
+    "type": "cascade"
+  },
+  {
+    "accelerator": "d",
+    "label": "Delete",
+    "state": "disabled",
+    "type": "command"
+  },
+  {
+    "accelerator": "m",
+    "label": "Merge",
+    "state": "disabled",
+    "type": "command"
+  },
+  {
+    "accelerator": "s",
+    "label": "Resample outline",
+    "state": "disabled",
+    "type": "command"
+  },
+  {
+    "label": "Select start",
+    "state": "disabled",
+    "type": "command"
+  },
+  {
+    "accelerator": "a",
+    "label": "Draw arrow",
+    "state": "normal",
+    "type": "command"
+  },
+  {
+    "accelerator": "c",
+    "entries": [
+      {
+        "accelerator": "0",
+        "label": "lithics",
+        "state": "disabled",
+        "type": "command"
+      },
+      {
+        "accelerator": "1",
+        "label": "table",
+        "state": "disabled",
+        "type": "command"
+      },
+      {
+        "accelerator": "2",
+        "label": "figure_caption",
+        "state": "disabled",
+        "type": "command"
+      }
+    ],
+    "label": "Change class",
+    "state": "disabled",
+    "type": "cascade"
+  }
+]

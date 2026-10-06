@@ -1,0 +1,3 @@
+lithics: Synthetic stone-tool illustration region.
+table: Synthetic tabular content region.
+figure_caption: Synthetic figure-caption text region.

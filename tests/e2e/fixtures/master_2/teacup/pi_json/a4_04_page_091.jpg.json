@@ -1,0 +1,33 @@
+{
+  "info": {
+    "description": "Image annotations for a4_04_page_091.jpg",
+    "date_modified": "2026-08-25T21:44:36+00:00"
+  },
+  "images": [
+    {
+      "id": 9,
+      "file_name": "a4_04_page_091.jpg",
+      "width": 1055,
+      "height": 1491,
+      "image_md5sum": "1e8f7e6470c4779ea612f435f4d3b281"
+    }
+  ],
+  "annotations": [],
+  "categories": [
+    {
+      "id": 2,
+      "name": "lithics",
+      "supercategory": "object"
+    },
+    {
+      "id": 3,
+      "name": "table",
+      "supercategory": "object"
+    },
+    {
+      "id": 4,
+      "name": "figure_caption",
+      "supercategory": "object"
+    }
+  ]
+}

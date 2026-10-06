@@ -1,0 +1,43 @@
+[
+  [
+    "dialog",
+    "askokcancel",
+    "Open last folder",
+    "->",
+    "ok"
+  ],
+  [
+    "dialog",
+    "askyesno",
+    "Reconcile project images?",
+    "->",
+    "yes"
+  ],
+  [
+    "dialog",
+    "askyesno",
+    "Use model.conf?",
+    "->",
+    "yes"
+  ],
+  [
+    "loaded",
+    "folder=<fixture>",
+    "images=8",
+    "index=0",
+    "classes=[lithics,table,figure_caption]",
+    "annotations=5"
+  ],
+  [
+    "submit",
+    "viewer.image_index_entry",
+    "8"
+  ],
+  [
+    "invoke",
+    "toolbar.save_button"
+  ],
+  [
+    "close"
+  ]
+]

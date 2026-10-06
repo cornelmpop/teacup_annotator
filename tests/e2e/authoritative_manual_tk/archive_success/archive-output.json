@@ -1,0 +1,20 @@
+{
+  "members": [
+    "README.txt",
+    "Teacup.sqlite3",
+    "a3_01_page_076.jpg",
+    "a3_02_page_205.jpg",
+    "a3_03_page_419.jpg",
+    "a3_04_page_054.jpg",
+    "a3_05_page_188.jpg",
+    "a4_02_page_038.jpg",
+    "a4_03_page_263.jpg",
+    "a4_04_page_091.jpg",
+    "a4_05_page_314.jpg",
+    "annotations.json",
+    "checksums.txt",
+    "class_definitions.txt"
+  ],
+  "image_count": 9,
+  "annotation_count": 13
+}

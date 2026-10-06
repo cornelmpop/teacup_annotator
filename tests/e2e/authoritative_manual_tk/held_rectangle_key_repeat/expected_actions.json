@@ -1,0 +1,13 @@
+[
+  ["dialog", "askokcancel", "Open last folder", "->", "ok"],
+  ["dialog", "local_class_source", "Choose annotation classes", "->", "defaults"],
+  ["dialog", "askyesno", "Use model.conf?", "->", "yes"],
+  ["loaded", "folder=<fixture>", "images=9", "index=0", "classes=[lithics,table,figure_caption]", "annotations=5"],
+  ["click", "viewer.canvas", "left", "image"],
+  ["command", "start_rectangle"],
+  ["drag", "viewer.canvas", "left", "image"],
+  ["command", "start_rectangle"],
+  ["command", "cancel"],
+  ["invoke", "toolbar.save_button"],
+  ["close"]
+]

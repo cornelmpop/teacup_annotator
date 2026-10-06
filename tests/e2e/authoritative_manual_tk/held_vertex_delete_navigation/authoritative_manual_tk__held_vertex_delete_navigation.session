@@ -1,0 +1,50 @@
+setup
+  fixture ../../fixtures/master_2
+  window 1200x760 canvas 762x642
+  prefs annotation_methodology= author_email= author_name= author_primary_affiliation=
+  prefs autoclose_enabled=false 'class_colours=#0f766e' collection_methodology= data_license=
+  prefs dataset_identifier= dataset_version= default_class=object 'image_folder=<fixture>'
+  prefs key_binding_autoclose=w key_binding_cancel=c key_binding_change_class=c key_binding_delete_annotation=d
+  prefs key_binding_delete_vertices=d key_binding_draw_arrow=a key_binding_flag_review=f key_binding_merge_annotation=m
+  prefs key_binding_multi_select=x key_binding_new_annotation=n key_binding_new_polygon=q key_binding_new_rectangle=r
+  prefs key_binding_simplify_polygon=s key_binding_undo=u 'last_image_folder=<fixture>' last_image_index=
+  prefs last_image_name= live_lines=true model_access_and_license= model_identifier=
+  prefs model_weights= 'overlapping_edge_colour=#7c3aed' overlapping_edge_width=3 prefs_version=1.9.4
+  prefs project_description= project_name= quality_control_methodology= reverse_horizontal_wheel=false
+  prefs 'selected_shared_edge_colour=#7dd3fc' show_labels=false show_overlapping_edges=false show_vertex_ids=true
+  prefs simplify_vertex_count=100 simplify_vertex_distance_px=7 snap_edits_enabled=false 'snap_live_line_colour=#16a34a'
+  prefs snap_new_enabled=false snapping_tolerance_px=5 source_image_origin= source_image_rights=
+  prefs write_json_backups=true
+
+session
+  dialog askokcancel 'Open last folder' -> ok
+  dialog local_class_source 'Choose annotation classes' -> defaults
+  dialog askyesno 'Use model.conf?' -> yes
+  loaded 'folder=<fixture>' images=9 index=0 'classes=[lithics,table,figure_caption]' annotations=5
+  command next_image -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=1 annotations=0 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  command next_image -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=2 annotations=0 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  command next_image -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=3 annotations=1 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  command next_image -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=4 annotations=4 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  command next_image -> mode=none temp_vertices=0 temp_arrow=none zoom=0.410785 index=5 annotations=3 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  click viewer.canvas left image 536.777527,352.982955 -> mode=none temp_vertices=0 temp_arrow=none zoom=0.410785 index=5 annotations=3 arrows=0 selected=1 'selected_regions=[1]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  key viewer.canvas press a -> mode=none temp_vertices=0 temp_arrow=none zoom=0.410785 index=5 annotations=3 arrows=0 selected=1 'selected_regions=[1]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  drag viewer.canvas left image 522.171336,494.176136 to 305.512833,883.674569 via '[519.736971,494.176136;519.736971,499.044867;519.736971,501.479232;512.433875,513.651058;507.565145,525.822884;497.827684,550.166536;488.090223,569.641458;463.746571,630.500588;449.14038,664.581701;424.796728,720.5721;385.846885,805.774882;373.675059,825.249804;346.897042,881.240204;337.159581,903.149491;327.42212,917.755682;324.987755,920.190047;324.987755,917.755682;322.553389,915.321317;315.250294,900.715125;307.947198,888.543299;305.512833,886.108934;305.512833,883.674569]' -> mode=none temp_vertices=0 temp_arrow=none zoom=0.410785 index=5 annotations=3 arrows=0 selected=1 'selected_regions=[1]' 'selected_arrows=[]' 'selected_vertices=[0:2,0:3,0:4]' dirty=0 undo_depth=0 audit_queue=0
+  command delete_vertices -> mode=none temp_vertices=0 temp_arrow=none zoom=0.410785 index=5 annotations=3 arrows=0 selected=1 'selected_regions=[1]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=1 undo_depth=1 audit_queue=0
+  command next_image -> mode=none temp_vertices=0 temp_arrow=none zoom=0.410785 index=6 annotations=0 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=1 undo_depth=1 audit_queue=0
+  command next_image -> mode=none temp_vertices=0 temp_arrow=none zoom=0.410785 index=7 annotations=0 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=1 undo_depth=1 audit_queue=0
+  command previous_image -> mode=none temp_vertices=0 temp_arrow=none zoom=0.410785 index=6 annotations=0 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=1 undo_depth=1 audit_queue=0
+  command previous_image -> mode=none temp_vertices=0 temp_arrow=none zoom=0.410785 index=5 annotations=3 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=1 undo_depth=1 audit_queue=0
+  key viewer.canvas release a -> mode=none temp_vertices=0 temp_arrow=none zoom=0.410785 index=5 annotations=3 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=1 undo_depth=1 audit_queue=0
+  click viewer.canvas left image 305.512833,883.674569 -> mode=none temp_vertices=0 temp_arrow=none zoom=0.410785 index=5 annotations=3 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=1 undo_depth=1 audit_queue=0
+  hover toolbar.save_button enter
+  hover toolbar.save_button leave
+  hover toolbar.run_button enter
+  hover toolbar.run_button leave
+  hover toolbar.save_button enter
+  invoke toolbar.save_button -> mode=none temp_vertices=0 temp_arrow=none zoom=0.410785 index=5 annotations=3 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=1 audit_queue=0
+  hover toolbar.save_button leave
+  hover toolbar.run_button enter
+  hover toolbar.run_button leave
+  close -> closed=1 in_transaction=0
+
+expect

@@ -1,0 +1,89 @@
+[
+  {
+    "label": "Undo last action",
+    "state": "normal",
+    "type": "command"
+  },
+  {
+    "accelerator": "n",
+    "entries": [
+      {
+        "accelerator": "q",
+        "label": "polygon",
+        "state": "normal",
+        "type": "command"
+      },
+      {
+        "accelerator": "r",
+        "label": "rectangle",
+        "state": "normal",
+        "type": "command"
+      }
+    ],
+    "label": "New annotation",
+    "state": "normal",
+    "type": "cascade"
+  },
+  {
+    "accelerator": "d",
+    "entries": [
+      {
+        "label": "lithics (162,840 px)",
+        "state": "normal",
+        "type": "command"
+      }
+    ],
+    "label": "Delete",
+    "state": "normal",
+    "type": "cascade"
+  },
+  {
+    "accelerator": "m",
+    "label": "Merge",
+    "state": "normal",
+    "type": "command"
+  },
+  {
+    "accelerator": "s",
+    "label": "Resample outline",
+    "state": "normal",
+    "type": "command"
+  },
+  {
+    "label": "Select start",
+    "state": "normal",
+    "type": "command"
+  },
+  {
+    "accelerator": "a",
+    "label": "Draw arrow",
+    "state": "normal",
+    "type": "command"
+  },
+  {
+    "accelerator": "c",
+    "entries": [
+      {
+        "accelerator": "0",
+        "label": "lithics",
+        "state": "normal",
+        "type": "command"
+      },
+      {
+        "accelerator": "1",
+        "label": "table",
+        "state": "normal",
+        "type": "command"
+      },
+      {
+        "accelerator": "2",
+        "label": "figure_caption",
+        "state": "normal",
+        "type": "command"
+      }
+    ],
+    "label": "Change class",
+    "state": "normal",
+    "type": "cascade"
+  }
+]

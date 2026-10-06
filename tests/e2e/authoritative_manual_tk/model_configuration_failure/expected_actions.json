@@ -1,0 +1,63 @@
+[
+  [
+    "dialog",
+    "askokcancel",
+    "Open last folder",
+    "->",
+    "ok"
+  ],
+  [
+    "dialog",
+    "local_class_source",
+    "Choose annotation classes",
+    "->",
+    "defaults"
+  ],
+  [
+    "dialog",
+    "askyesno",
+    "Use model.conf?",
+    "->",
+    "yes"
+  ],
+  [
+    "loaded",
+    "folder=<fixture>",
+    "images=9",
+    "index=0",
+    "classes=[lithics,table,figure_caption]",
+    "annotations=5"
+  ],
+  [
+    "invoke",
+    "toolbar.run_button"
+  ],
+  [
+    "dialog",
+    "askyesno",
+    "Replace model annotations?",
+    "->",
+    "yes"
+  ],
+  [
+    "dialog",
+    "askopenfilename",
+    "Select RF-DETR weights",
+    "->",
+    "<fixture>/e2e_invalid_rfdetr.pt"
+  ],
+  [
+    "dialog",
+    "error_details",
+    "Could not configure model",
+    "->",
+    "close"
+  ],
+  [
+    "invoke",
+    "toolbar.save_button"
+  ],
+  [
+    "close"
+  ]
+]

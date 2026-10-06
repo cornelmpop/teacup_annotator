@@ -1,0 +1,23 @@
+[
+  ["dialog", "askokcancel", "Open last folder", "->", "ok"],
+  ["dialog", "local_class_source", "Choose annotation classes", "->", "defaults"],
+  ["dialog", "askyesno", "Use model.conf?", "->", "yes"],
+  ["loaded", "folder=<fixture>", "images=9", "index=0", "classes=[lithics,table,figure_caption]", "annotations=5"],
+  ["click", "viewer.canvas", "left", "image"],
+  ["zoom", "viewer.canvas", "in", "image", "141.474274,65.611258"],
+  ["zoom", "viewer.canvas", "in", "image", "153.330657,125.69548"],
+  ["zoom", "viewer.canvas", "in", "image", "153.485693,148.834611"],
+  ["zoom", "viewer.canvas", "in", "image", "153.687914,148.295355"],
+  ["command", "start_rectangle"],
+  ["drag", "viewer.canvas", "left", "image"],
+  ["menu", "viewer.canvas", "right", "image", "654.140776,180.533476", "snapshot=menu_001"],
+  ["choose", "Undo last action"],
+  ["command", "start_polygon"],
+  ["new_polygon_point", "viewer.canvas", "image", "485.330253,407.958764"],
+  ["new_polygon_point", "viewer.canvas", "image", "150.053798,107.851167"],
+  ["resize", "window", "1622x997", "canvas", "1184x879"],
+  ["new_polygon_point", "viewer.canvas", "image", "148.881503,634.211756"],
+  ["command", "cancel"],
+  ["invoke", "toolbar.save_button"],
+  ["close"]
+]

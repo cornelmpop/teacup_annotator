@@ -1,0 +1,16 @@
+{
+  "classes": [
+    {
+      "name": "lithics",
+      "colour": "#ffb800"
+    },
+    {
+      "name": "table",
+      "colour": "#ff0000"
+    },
+    {
+      "name": "figure_caption",
+      "colour": "#00ff00"
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  core-import:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # CODEX: v6.0.2
+      - name: Install uv and Python
+        uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # CODEX: v8.1.0
+        with:
+          enable-cache: true
+          python-version: "3.12"
+      - name: Install core application
+        run: uv sync --locked
+      - name: Import application without model extras
+        run: uv run --no-sync python -c "import annotator.gui.app"
+
+  package-artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # CODEX: v6.0.2
+      - name: Install uv and Python
+        uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # CODEX: v8.1.0
+        with:
+          enable-cache: true
+          python-version: "3.12"
+      - name: Verify dependency lock
+        run: uv lock --check
+      - name: Build source distribution
+        run: uv build --sdist
+      - name: Verify source distribution excludes tests
+        run: |
+          if tar -tzf dist/*.tar.gz | grep '/tests/' > /dev/null; then
+            echo "Regression: bugs/sdist_includes_partial_unisolated_tests_2026-09-01.md"
+            exit 1
+          fi
+      - name: Verify source distribution includes Remix Icon terms
+        run: |
+          license_path=$(tar -tzf dist/*.tar.gz | grep '/annotator/icons/REMIX_ICON_LICENSE.txt$')
+          test -n "$license_path"
+          test "$(tar -xOf dist/*.tar.gz "$license_path" | sha256sum | cut -d' ' -f1)" = "6f2f21c5f8db34635d31848e9ff831d5dc421bb83ffc9d37f82651364047ae58"
+      - name: Build wheel from source distribution
+        run: uv build --wheel dist/*.tar.gz
+      - name: Verify wheel includes Remix Icon terms
+        run: |
+          python - <<'PY'
+          from hashlib import sha256
+          from pathlib import Path
+          from zipfile import ZipFile
+
+          expected_hash = "6f2f21c5f8db34635d31848e9ff831d5dc421bb83ffc9d37f82651364047ae58"
+          wheel_path = next(Path("dist").glob("*.whl"))
+          with ZipFile(wheel_path) as archive:
+              package_license = "annotator/icons/REMIX_ICON_LICENSE.txt"
+              metadata_licenses = [
+                  name
+                  for name in archive.namelist()
+                  if name.endswith(
+                      ".dist-info/licenses/annotator/icons/REMIX_ICON_LICENSE.txt"
+                  )
+              ]
+              assert len(metadata_licenses) == 1, metadata_licenses
+              for name in [package_license, *metadata_licenses]:
+                  assert sha256(archive.read(name)).hexdigest() == expected_hash, name
+          PY
+      - name: Create clean install environment
+        run: uv venv --python 3.12 .package-venv
+      - name: Install built wheel
+        run: uv pip install --python .package-venv/bin/python dist/*.whl
+      - name: Check installed command version
+        run: .package-venv/bin/teacup-annotator --version
+      - name: Check installed package resources
+        run: .package-venv/bin/teacup-annotator --check-resources
+      - name: Import installed application
+        working-directory: ${{ runner.temp }}
+        run: |
+          "${{ github.workspace }}/.package-venv/bin/python" -c "import sys; from pathlib import Path; import annotator.gui.app as app; module_path = Path(app.__file__).resolve(); assert module_path.is_relative_to(Path(sys.prefix).resolve()), module_path"
+
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # CODEX: v6.0.2
+      - name: Install uv and Python
+        uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # CODEX: v8.1.0
+        with:
+          enable-cache: true
+          python-version: ${{ matrix.python-version }}
+      - name: Verify dependency lock
+        run: uv lock --check
+      - name: Install test environment
+        run: uv sync --locked --group test
+      - name: Verify non-recording pytest executable collection
+        run: uv run --no-sync pytest --collect-only -q --ignore=tests/e2e/test_authoritative_manual_tk_recordings.py
+      - name: Run Linux test suite without authoritative recordings
+        run: xvfb-run -a uv run --no-sync python -m pytest --ignore=tests/e2e/test_authoritative_manual_tk_recordings.py
+
+  windows-tests:
+    name: Windows tests
+    runs-on: windows-2022
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.12", "3.13"]
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # CODEX: v6.0.2
+      - name: Install uv and Python
+        uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # CODEX: v8.1.0
+        with:
+          enable-cache: true
+          python-version: ${{ matrix.python-version }}
+      - name: Verify dependency lock
+        run: uv lock --check
+      - name: Install test environment
+        run: uv sync --locked --group test
+      - name: Verify non-recording pytest executable collection
+        run: uv run --no-sync pytest --collect-only -q --ignore=tests/e2e/test_authoritative_manual_tk_recordings.py
+      - name: Run Windows test suite without authoritative recordings
+        run: uv run --no-sync python -m pytest --ignore=tests/e2e/test_authoritative_manual_tk_recordings.py
+
+  model-tests:
+    name: Model checkpoint tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # CODEX: v6.0.2
+      - name: Install uv and Python
+        uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # CODEX: v8.1.0
+        with:
+          enable-cache: true
+          python-version: "3.12"
+      - name: Verify dependency lock
+        run: uv lock --check
+      - name: Install model test environment
+        run: uv sync --locked --group test --group model-test
+      - name: Verify PyTorch import
+        run: uv run --no-sync python -c "import torch"
+      - name: Run model checkpoint tests
+        run: uv run --no-sync python -m pytest -q tests/test_model_profile_percent_values.py tests/test_rf_detr_checkpoint_metadata.py
+
+  authoritative-gui-replay:
+    name: Authoritative GUI replay
+    runs-on: macos-15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # CODEX: v6.0.2
+      - name: Install pinned uv and Python
+        uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # CODEX: v8.1.0
+        with:
+          enable-cache: true
+          version: "0.11.32"
+          python-version: "3.12.13"
+      - name: Verify dependency lock
+        run: uv lock --check
+      - name: Install test environment
+        run: uv sync --locked --group test
+      - name: Report and require replay environment
+        run: |
+          uv --version
+          uv run --no-sync python -m tools.e2e_session.replay_environment --require-supported
+      - name: Run every authoritative recording
+        run: |
+          uv run --no-sync python -m pytest -q tests/e2e/test_authoritative_manual_tk_recordings.py --junitxml=authoritative-replay.xml
+      - name: Require 27 passing and unskipped recordings
+        run: |
+          uv run --no-sync python -c "from xml.etree import ElementTree; suite = ElementTree.parse('authoritative-replay.xml').getroot()[0]; expected = {'tests': '27', 'errors': '0', 'failures': '0', 'skipped': '0'}; achieved = {name: suite.get(name) for name in expected}; assert achieved == expected, achieved"

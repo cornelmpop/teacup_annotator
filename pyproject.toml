@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+authors = [
+    {name = "Cornel M. Pop", email = "cornel.pop@gmail.com"}
+]
+name = "teacup-annotator"
+version = "0.9.8"
+description = "Desktop JPEG annotation with SQLite-authoritative persistence"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+license = "GPL-2.0-or-later"
+license-files = ["LICENSE", "annotator/icons/REMIX_ICON_LICENSE.txt"]
+dependencies = [
+    "numpy>=2.0",
+    "Pillow>=10.4",
+    "shapely>=2.0.4",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+]
+
+[project.scripts]
+teacup-annotator = "annotator.cli:main"
+
+[project.optional-dependencies]
+model = [
+    "opencv-python>=4.10",
+    "rfdetr>=1.7,<2",
+    "torch>=2.5,<3",
+]
+
+[dependency-groups]
+test = [
+    "pytest>=9.0.3,<10",
+]
+model-test = [
+    "torch>=2.5,<3",
+]
+
+[tool.setuptools.packages.find]
+include = ["annotator*"]
+
+[tool.setuptools.package-data]
+annotator = [
+    "icons/*.png",
+    "icons/README.txt",
+    "icons/REMIX_ICON_LICENSE.txt",
+]
+"annotator.resources" = ["*.conf", "*.sql"]
+
+[tool.uv]
+package = true
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

@@ -1,0 +1,65 @@
+setup
+  fixture ../../fixtures/master_2
+  window 1200x760 canvas 762x642
+  prefs annotation_methodology= author_email= author_name= author_primary_affiliation=
+  prefs autoclose_enabled=false 'class_colours=#0f766e' collection_methodology= data_license=
+  prefs dataset_identifier= dataset_version= default_class=object 'image_folder=<fixture>'
+  prefs key_binding_autoclose=w key_binding_cancel=c key_binding_change_class=c key_binding_delete_annotation=d
+  prefs key_binding_delete_vertices=d key_binding_draw_arrow=a key_binding_flag_review=f key_binding_merge_annotation=m
+  prefs key_binding_multi_select=x key_binding_new_annotation=n key_binding_new_polygon=q key_binding_new_rectangle=r
+  prefs key_binding_simplify_polygon=s key_binding_undo=u 'last_image_folder=<fixture>' last_image_index=
+  prefs last_image_name= live_lines=true model_access_and_license= model_identifier=
+  prefs model_weights= 'overlapping_edge_colour=#7c3aed' overlapping_edge_width=3 prefs_version=1.9.4
+  prefs project_description= project_name= quality_control_methodology= reverse_horizontal_wheel=false
+  prefs 'selected_shared_edge_colour=#7dd3fc' show_labels=false show_overlapping_edges=false show_vertex_ids=true
+  prefs simplify_vertex_count=100 simplify_vertex_distance_px=7 snap_edits_enabled=false 'snap_live_line_colour=#16a34a'
+  prefs snap_new_enabled=false snapping_tolerance_px=5 source_image_origin= source_image_rights=
+  prefs write_json_backups=true
+
+session
+  dialog askokcancel 'Open last folder' -> ok
+  dialog local_class_source 'Choose annotation classes' -> defaults
+  dialog askyesno 'Use model.conf?' -> yes
+  loaded 'folder=<fixture>' images=9 index=0 'classes=[lithics,table,figure_caption]' annotations=5
+  hover toolbar.delete_image_button enter
+  invoke toolbar.delete_image_button -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=0 annotations=5 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  hover toolbar.delete_image_button leave
+  hover toolbar.delete_image_button enter
+  invoke toolbar.delete_image_button -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=0 annotations=5 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  hover toolbar.delete_image_button leave
+  hover toolbar.delete_image_button enter
+  invoke toolbar.delete_image_button -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=0 annotations=5 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  hover toolbar.delete_image_button leave
+  hover toolbar.delete_image_button enter
+  hover toolbar.delete_image_button leave
+  hover toolbar.archive_button enter
+  hover toolbar.archive_button leave
+  hover toolbar.save_button enter
+  hover toolbar.save_button leave
+  hover toolbar.run_button enter
+  hover toolbar.run_button leave
+  hover toolbar.load_button enter
+  hover toolbar.load_button leave
+  hover toolbar.run_button enter
+  hover toolbar.run_button leave
+  hover toolbar.save_button enter
+  invoke toolbar.save_button -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=0 annotations=5 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  dialog askyesno 'Delete marked images?' -> no
+  hover toolbar.save_button leave
+  hover toolbar.save_button enter
+  invoke toolbar.save_button -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=0 annotations=0 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  dialog askyesno 'Delete marked images?' -> yes
+  hover toolbar.save_button leave
+  hover toolbar.config_button enter
+  hover toolbar.config_button leave
+  hover toolbar.archive_button enter
+  hover toolbar.archive_button leave
+  hover toolbar.save_button enter
+  hover toolbar.save_button leave
+  hover toolbar.run_button enter
+  hover toolbar.run_button leave
+  hover toolbar.load_button enter
+  hover toolbar.load_button leave
+  close -> closed=1 in_transaction=0
+
+expect

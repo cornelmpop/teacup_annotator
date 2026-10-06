@@ -1,0 +1,42 @@
+[
+  [
+    "dialog",
+    "askokcancel",
+    "Open last folder",
+    "->",
+    "cancel"
+  ],
+  [
+    "invoke",
+    "toolbar.load_button"
+  ],
+  [
+    "dialog",
+    "askdirectory",
+    "Load image folder",
+    "->",
+    "<fixture>"
+  ],
+  [
+    "dialog",
+    "showwarning",
+    "No folder model configuration",
+    "->",
+    "ok"
+  ],
+  [
+    "loaded",
+    "folder=<fixture>",
+    "images=10",
+    "index=0",
+    "classes=[object]",
+    "annotations=0"
+  ],
+  [
+    "invoke",
+    "toolbar.save_button"
+  ],
+  [
+    "close"
+  ]
+]

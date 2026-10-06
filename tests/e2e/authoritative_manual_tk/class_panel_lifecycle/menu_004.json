@@ -1,0 +1,20 @@
+[
+  {
+    "label": "Delete class",
+    "state": "normal",
+    "type": "command"
+  },
+  {
+    "label": "Change colour",
+    "state": "normal",
+    "type": "command"
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "label": "Add class",
+    "state": "normal",
+    "type": "command"
+  }
+]

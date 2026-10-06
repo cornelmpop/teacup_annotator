@@ -1,0 +1,180 @@
+{
+  "info": {
+    "description": "Image annotations for a3_01_page_076.jpg",
+    "date_modified": "2026-08-25T21:44:36+00:00"
+  },
+  "images": [
+    {
+      "id": 1,
+      "file_name": "a3_01_page_076.jpg",
+      "width": 1492,
+      "height": 1054,
+      "image_md5sum": "0e0ede26df9ea5cf93ca65eb1dfb0e47"
+    }
+  ],
+  "annotations": [
+    {
+      "annotation_type": "rectangle",
+      "entry_type": "manual",
+      "id": 1,
+      "image_id": 1,
+      "category_id": 2,
+      "segmentation": [
+        [
+          513.6131266490765,
+          291.1499560246262,
+          958.5394678979771,
+          291.1499560246262,
+          958.5394678979771,
+          670.4650395778364,
+          513.6131266490765,
+          670.4650395778364
+        ]
+      ],
+      "bbox": [
+        513.6131266490765,
+        291.1499560246262,
+        444.9263412489006,
+        379.3150835532102
+      ],
+      "area": 168767.27230585093,
+      "iscrowd": 0,
+      "annotation_uuid": "ann:159b871a-1859-4f3e-9776-c1beb03e430f"
+    },
+    {
+      "annotation_type": "rectangle",
+      "class_name": "figure_caption",
+      "entry_type": "manual",
+      "obj_class": "figure_caption",
+      "id": 2,
+      "image_id": 1,
+      "category_id": 4,
+      "segmentation": [
+        [
+          577.1740325417766,
+          625.3572999120493,
+          903.1799692172383,
+          625.3572999120493,
+          903.1799692172383,
+          664.3139841688654,
+          577.1740325417766,
+          664.3139841688654
+        ]
+      ],
+      "bbox": [
+        577.1740325417766,
+        625.3572999120493,
+        326.0059366754617,
+        38.956684256816175
+      ],
+      "area": 12700.110340913583,
+      "iscrowd": 0,
+      "annotation_uuid": "ann:1706e6ef-a4e9-4f96-ba78-691fff04e2f4"
+    },
+    {
+      "annotation_type": "rectangle",
+      "class_name": "table",
+      "entry_type": "manual",
+      "obj_class": "table",
+      "id": 3,
+      "image_id": 1,
+      "category_id": 3,
+      "segmentation": [
+        [
+          48.183267370272645,
+          709.4217238346525,
+          1442.422493403694,
+          709.4217238346525,
+          1442.422493403694,
+          959.5646437994723,
+          48.183267370272645,
+          959.5646437994723
+        ]
+      ],
+      "bbox": [
+        48.183267370272645,
+        709.4217238346525,
+        1394.2392260334213,
+        250.14291996481973
+      ],
+      "area": 348759.07112949045,
+      "iscrowd": 0,
+      "annotation_uuid": "ann:b93558db-91bd-4046-855e-649c5a557c7b"
+    },
+    {
+      "annotation_type": "polygon",
+      "class_name": "figure_caption",
+      "entry_type": "manual",
+      "obj_class": "figure_caption",
+      "id": 4,
+      "image_id": 1,
+      "category_id": 4,
+      "segmentation": [
+        [
+          714.5476033421284,
+          963.665347405453,
+          696.0944371152154,
+          1004.6723834652595,
+          769.9071020228672,
+          1012.8737906772208,
+          780.1588610378188,
+          965.7156992084433
+        ]
+      ],
+      "bbox": [
+        696.0944371152154,
+        963.665347405453,
+        84.0644239226034,
+        49.208443271767806
+      ],
+      "area": 3146.6509732452105,
+      "iscrowd": 0,
+      "annotation_uuid": "ann:73863a5c-cd58-43b9-8c29-65636b84df56"
+    },
+    {
+      "annotation_type": "rectangle",
+      "entry_type": "manual",
+      "id": 5,
+      "image_id": 1,
+      "category_id": 3,
+      "segmentation": [
+        [
+          1011.8486147757255,
+          53.30914687774846,
+          1434.2210861917326,
+          53.30914687774846,
+          1434.2210861917326,
+          354.71086191732627,
+          1011.8486147757255,
+          354.71086191732627
+        ]
+      ],
+      "bbox": [
+        1011.8486147757255,
+        53.30914687774846,
+        422.3724714160071,
+        301.4017150395778
+      ],
+      "area": 127303.78727028955,
+      "iscrowd": 0,
+      "annotation_uuid": "ann:1eef4494-8303-4bbe-be65-e001ca7487de"
+    }
+  ],
+  "categories": [
+    {
+      "id": 2,
+      "name": "lithics",
+      "supercategory": "object"
+    },
+    {
+      "id": 3,
+      "name": "table",
+      "supercategory": "object"
+    },
+    {
+      "id": 4,
+      "name": "figure_caption",
+      "supercategory": "object"
+    }
+  ]
+}

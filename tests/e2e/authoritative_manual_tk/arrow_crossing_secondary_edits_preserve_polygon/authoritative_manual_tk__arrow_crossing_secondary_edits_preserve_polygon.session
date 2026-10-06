@@ -1,0 +1,56 @@
+setup
+  fixture ../../fixtures/master_2
+  window 1200x760 canvas 762x642
+  prefs annotation_methodology= author_email= author_name= author_primary_affiliation=
+  prefs autoclose_enabled=false 'class_colours=#0f766e' collection_methodology= data_license=
+  prefs dataset_identifier= dataset_version= default_class=object 'image_folder=<fixture>'
+  prefs key_binding_autoclose=w key_binding_cancel=c key_binding_change_class=c key_binding_delete_annotation=d
+  prefs key_binding_delete_vertices=d key_binding_draw_arrow=a key_binding_flag_review=f key_binding_merge_annotation=m
+  prefs key_binding_multi_select=x key_binding_new_annotation=n key_binding_new_polygon=q key_binding_new_rectangle=r
+  prefs key_binding_simplify_polygon=s key_binding_undo=u 'last_image_folder=<fixture>' last_image_index=
+  prefs last_image_name= live_lines=true model_access_and_license= model_identifier=
+  prefs model_weights= 'overlapping_edge_colour=#7c3aed' overlapping_edge_width=3 prefs_version=1.9.4
+  prefs project_description= project_name= quality_control_methodology= reverse_horizontal_wheel=false
+  prefs 'selected_shared_edge_colour=#7dd3fc' show_labels=false show_overlapping_edges=false show_vertex_ids=true
+  prefs simplify_vertex_count=100 simplify_vertex_distance_px=7 snap_edits_enabled=false 'snap_live_line_colour=#16a34a'
+  prefs snap_new_enabled=false snapping_tolerance_px=5 source_image_origin= source_image_rights=
+  prefs write_json_backups=true
+
+session
+  dialog askokcancel 'Open last folder' -> ok
+  dialog local_class_source 'Choose annotation classes' -> defaults
+  dialog askyesno 'Use model.conf?' -> yes
+  loaded 'folder=<fixture>' images=9 index=0 'classes=[lithics,table,figure_caption]' annotations=5
+  submit viewer.image_index_entry 2 -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=1 annotations=0 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  click viewer.canvas left image 147.62533,420.32212 -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=1 annotations=0 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  command start_polygon -> mode=new temp_vertices=0 temp_arrow=none zoom=0.487721 index=1 annotations=0 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  new_polygon_point viewer.canvas image 395.717898,266.545734 -> mode=new temp_vertices=1 temp_arrow=none zoom=0.487721 index=1 annotations=0 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  new_polygon_point viewer.canvas image 401.868953,760.680519 -> mode=new temp_vertices=2 temp_arrow=none zoom=0.487721 index=1 annotations=0 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  new_polygon_point viewer.canvas image 1160.49912,754.529464 -> mode=new temp_vertices=3 temp_arrow=none zoom=0.487721 index=1 annotations=0 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  new_polygon_point viewer.canvas image 1144.096306,262.445031 -> mode=new temp_vertices=4 temp_arrow=none zoom=0.487721 index=1 annotations=0 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=0 audit_queue=0
+  new_polygon_point viewer.canvas image 397.76825,266.545734 -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=1 annotations=1 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=1 undo_depth=1 audit_queue=0
+  click viewer.canvas left image 779.133685,473.631266 -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=1 annotations=1 arrows=0 selected=0 'selected_regions=[0]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=1 undo_depth=1 audit_queue=0
+  click viewer.canvas left image 159.927441,471.580915 -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=1 annotations=1 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=1 undo_depth=1 audit_queue=0
+  command start_arrow -> mode=arrow temp_vertices=0 temp_arrow=none zoom=0.487721 index=1 annotations=1 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=1 undo_depth=1 audit_queue=0
+  arrow_point viewer.canvas image 159.927441,471.580915 -> mode=arrow temp_vertices=0 temp_arrow=159.927441,471.580915 zoom=0.487721 index=1 annotations=1 arrows=0 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=1 undo_depth=1 audit_queue=0
+  arrow_point viewer.canvas image 1365.534301,471.580915 -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=1 annotations=1 arrows=1 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=1 undo_depth=2 audit_queue=0
+  click viewer.canvas left image 684.817502,346.509455 -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=1 annotations=1 arrows=1 selected=0 'selected_regions=[0]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=1 undo_depth=2 audit_queue=0
+  click viewer.canvas left image 1238.412489,381.365435 -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=1 annotations=1 arrows=1 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=1 undo_depth=2 audit_queue=0
+  click viewer.canvas left image 1238.412489,471.580915 -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=1 annotations=1 arrows=1 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=1 undo_depth=2 audit_queue=0
+  drag viewer.canvas right image 1367.584653,471.580915 to 1340.930079,268.596086 via '[1365.534301,469.530563;1365.534301,467.480211;1363.483949,465.429859;1363.483949,463.379507;1361.433597,463.379507;1361.433597,461.329156;1359.383245,459.278804;1359.383245,457.228452;1355.282542,451.077397;1355.282542,449.027045;1353.23219,446.976693;1351.181838,440.825638;1347.081135,434.674582;1345.030783,430.573879;1345.030783,428.523527;1342.980431,422.372471;1340.930079,422.372471;1340.930079,414.171064;1338.879727,412.120712;1338.879727,405.969657;1336.829376,403.919305;1336.829376,399.818602;1334.779024,391.617194;1334.779024,385.466139;1334.779024,383.415787;1334.779024,379.315084;1334.779024,375.21438;1334.779024,371.113676;1334.779024,369.063325;1334.779024,364.962621;1334.779024,362.912269;1334.779024,358.811566;1334.779024,354.710862;1336.829376,352.66051;1336.829376,350.610158;1336.829376,348.559807;1336.829376,346.509455;1336.829376,344.459103;1336.829376,342.408751;1336.829376,340.358399;1336.829376,338.308047;1336.829376,336.257696;1338.879727,330.10664;1338.879727,328.056288;1338.879727,321.905233;1338.879727,317.804529;1338.879727,305.502419;1338.879727,301.401715;1338.879727,293.200308;1338.879727,282.948549;1340.930079,278.847845;1340.930079,276.797493;1340.930079,274.747142;1340.930079,272.69679;1340.930079,270.646438;1340.930079,268.596086]' -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=1 annotations=1 arrows=1 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=1 undo_depth=3 audit_queue=0
+  click viewer.canvas left image 865.248461,479.782322 -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=1 annotations=1 arrows=1 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=1 undo_depth=3 audit_queue=0
+  click viewer.canvas left image 1181.002639,504.386544 -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=1 annotations=1 arrows=1 selected=none 'selected_regions=[]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=1 undo_depth=3 audit_queue=0
+  click viewer.canvas left image 795.5365,504.386544 -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=1 annotations=1 arrows=1 selected=0 'selected_regions=[0]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=1 undo_depth=3 audit_queue=0
+  drag viewer.canvas right image 401.868953,266.545734 to 578.199208,198.884125 via '[403.919305,266.545734;405.969657,266.545734;408.020009,266.545734;412.120712,264.495383;416.221416,264.495383;422.372471,260.394679;424.422823,260.394679;434.674582,254.243624;440.825638,250.14292;451.077397,246.042216;457.228452,241.941513;467.480211,237.840809;473.631266,235.790457;477.73197,233.740106;479.782322,231.689754;485.933377,229.639402;494.134785,227.58905;502.336192,223.488347;506.436895,221.437995;512.587951,219.387643;524.890062,215.286939;528.990765,215.286939;543.343228,209.135884;557.69569,205.03518;567.947449,202.984828;572.048153,200.934477;576.148857,198.884125;578.199208,198.884125]' -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=1 annotations=1 arrows=1 selected=0 'selected_regions=[0]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=1 undo_depth=4 audit_queue=0
+  hover toolbar.run_button enter
+  hover toolbar.run_button leave
+  hover toolbar.save_button enter
+  invoke toolbar.save_button -> mode=none temp_vertices=0 temp_arrow=none zoom=0.487721 index=1 annotations=1 arrows=1 selected=0 'selected_regions=[0]' 'selected_arrows=[]' 'selected_vertices=[]' dirty=0 undo_depth=4 audit_queue=0
+  hover toolbar.save_button leave
+  hover toolbar.run_button enter
+  hover toolbar.run_button leave
+  hover toolbar.load_button enter
+  hover toolbar.load_button leave
+  close -> closed=1 in_transaction=0
+
+expect

@@ -1,0 +1,2 @@
+"""Image annotation GUI package."""
+

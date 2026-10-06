@@ -1,0 +1,125 @@
+[
+  [
+    "dialog",
+    "askokcancel",
+    "Open last folder",
+    "->",
+    "ok"
+  ],
+  [
+    "dialog",
+    "local_class_source",
+    "Choose annotation classes",
+    "->",
+    "defaults"
+  ],
+  [
+    "dialog",
+    "askyesno",
+    "Use model.conf?",
+    "->",
+    "yes"
+  ],
+  [
+    "loaded",
+    "folder=<fixture>",
+    "images=9",
+    "index=0",
+    "classes=[lithics,table,figure_caption]",
+    "annotations=5"
+  ],
+  [
+    "menu",
+    "controls.class_list_canvas",
+    "right",
+    "canvas",
+    "115,65",
+    "class=figure_caption",
+    "snapshot=menu_001"
+  ],
+  [
+    "choose",
+    "Add class"
+  ],
+  [
+    "dialog",
+    "new_local_class",
+    "Add annotation class",
+    "name=manual_tk_unused",
+    "colour=#0f766e",
+    "->",
+    "ok"
+  ],
+  [
+    "select",
+    "controls.default_class_dropdown",
+    "manual_tk_unused"
+  ],
+  [
+    "menu",
+    "controls.class_list_canvas",
+    "right",
+    "canvas",
+    "67,11",
+    "class=lithics",
+    "snapshot=menu_002"
+  ],
+  [
+    "choose",
+    "Delete class"
+  ],
+  [
+    "dialog",
+    "showwarning",
+    "Class is in use",
+    "->",
+    "ok"
+  ],
+  [
+    "menu",
+    "controls.class_list_canvas",
+    "right",
+    "canvas",
+    "151,88",
+    "class=manual_tk_unused",
+    "snapshot=menu_003"
+  ],
+  [
+    "choose",
+    "Change colour"
+  ],
+  [
+    "dialog",
+    "class_colour",
+    "Choose annotation class colour",
+    "->",
+    "#0c18e9"
+  ],
+  [
+    "menu",
+    "controls.class_list_canvas",
+    "right",
+    "canvas",
+    "135,88",
+    "class=manual_tk_unused",
+    "snapshot=menu_004"
+  ],
+  [
+    "choose",
+    "Delete class"
+  ],
+  [
+    "dialog",
+    "askyesno",
+    "Delete annotation class?",
+    "->",
+    "yes"
+  ],
+  [
+    "invoke",
+    "toolbar.save_button"
+  ],
+  [
+    "close"
+  ]
+]

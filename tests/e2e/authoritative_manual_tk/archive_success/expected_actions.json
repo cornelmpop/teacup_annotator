@@ -1,0 +1,56 @@
+[
+  [
+    "dialog",
+    "askokcancel",
+    "Open last folder",
+    "->",
+    "ok"
+  ],
+  [
+    "dialog",
+    "askyesno",
+    "Use model.conf?",
+    "->",
+    "yes"
+  ],
+  [
+    "loaded",
+    "folder=<fixture>",
+    "images=9",
+    "index=0",
+    "classes=[lithics,table,figure_caption]",
+    "annotations=5"
+  ],
+  [
+    "invoke",
+    "toolbar.archive_button"
+  ],
+  [
+    "dialog",
+    "askokcancel",
+    "Create distribution archive",
+    "->",
+    "ok"
+  ],
+  [
+    "dialog",
+    "asksaveasfilename",
+    "Save annotation archive",
+    "->",
+    "<fixture>/manual_archive.zip"
+  ],
+  [
+    "dialog",
+    "showinfo",
+    "Archive created",
+    "->",
+    "ok"
+  ],
+  [
+    "invoke",
+    "toolbar.save_button"
+  ],
+  [
+    "close"
+  ]
+]

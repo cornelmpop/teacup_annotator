@@ -1,0 +1,64 @@
+{
+  "info": {
+    "description": "Image annotations for a3_04_page_054.jpg",
+    "date_modified": "2026-08-25T21:44:36+00:00"
+  },
+  "images": [
+    {
+      "id": 4,
+      "file_name": "a3_04_page_054.jpg",
+      "width": 1492,
+      "height": 1054,
+      "image_md5sum": "b667557f9cc4b121388b1cd92c4fe213"
+    }
+  ],
+  "annotations": [
+    {
+      "annotation_type": "rectangle",
+      "class_name": "lithics",
+      "entry_type": "manual",
+      "obj_class": "lithics",
+      "id": 6,
+      "image_id": 4,
+      "category_id": 2,
+      "segmentation": [
+        [
+          894.620669056153,
+          296.3500597371565,
+          1267.8434886499404,
+          296.3500597371565,
+          1267.8434886499404,
+          582.673237753883,
+          894.620669056153,
+          582.673237753883
+        ]
+      ],
+      "bbox": [
+        894.620669056153,
+        296.3500597371565,
+        373.22281959378734,
+        286.32317801672644
+      ],
+      "area": 106862.34381445654,
+      "iscrowd": 0,
+      "annotation_uuid": "ann:9985be9e-0189-4fa2-bab3-6cfd416af0ca"
+    }
+  ],
+  "categories": [
+    {
+      "id": 2,
+      "name": "lithics",
+      "supercategory": "object"
+    },
+    {
+      "id": 3,
+      "name": "table",
+      "supercategory": "object"
+    },
+    {
+      "id": 4,
+      "name": "figure_caption",
+      "supercategory": "object"
+    }
+  ]
+}

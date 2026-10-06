@@ -1,0 +1,67 @@
+[
+  [
+    "dialog",
+    "askokcancel",
+    "Open last folder",
+    "->",
+    "ok"
+  ],
+  [
+    "dialog",
+    "local_class_source",
+    "Choose annotation classes",
+    "->",
+    "defaults"
+  ],
+  [
+    "dialog",
+    "askyesno",
+    "Use model.conf?",
+    "->",
+    "yes"
+  ],
+  [
+    "loaded",
+    "folder=<fixture>",
+    "images=9",
+    "index=0",
+    "classes=[lithics,table,figure_caption]",
+    "annotations=5"
+  ],
+  [
+    "submit",
+    "viewer.image_index_entry",
+    "2"
+  ],
+  [
+    "click",
+    "viewer.canvas",
+    "left",
+    "image"
+  ],
+  [
+    "command",
+    "start_polygon"
+  ],
+  [
+    "new_polygon_point",
+    "viewer.canvas",
+    "image",
+    "233.740106,301.401715"
+  ],
+  [
+    "new_polygon_point",
+    "viewer.canvas",
+    "image",
+    "1209.707564,125.07146"
+  ],
+  [
+    "new_polygon_point",
+    "viewer.canvas",
+    "image",
+    "1082.585752,967.766051"
+  ],
+  [
+    "close"
+  ]
+]

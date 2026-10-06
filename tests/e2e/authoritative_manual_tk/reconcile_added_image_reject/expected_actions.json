@@ -1,0 +1,19 @@
+[
+  [
+    "dialog",
+    "askokcancel",
+    "Open last folder",
+    "->",
+    "ok"
+  ],
+  [
+    "dialog",
+    "askyesno",
+    "Reconcile project images?",
+    "->",
+    "no"
+  ],
+  [
+    "close"
+  ]
+]
