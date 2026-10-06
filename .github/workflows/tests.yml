@@ -18,6 +18,10 @@ jobs:
         with:
           enable-cache: true
           python-version: "3.12"
+      - name: Install Tkinter
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3-tk
       - name: Install core application
         run: uv sync --locked
       - name: Import application without model extras
