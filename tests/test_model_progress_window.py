@@ -90,7 +90,8 @@ class ModelProgressWindowTests(unittest.TestCase):
         self.assertIn("1024 x 1024", confirmation)
         self.assertIn("only mode currently supported", confirmation)
         self.assertIn("confidence threshold of 0.63", confirmation)
-        self.assertIn("/images/model.conf", confirmation)
+        #self.assertIn("/images/model.conf", confirmation) # - CMP: breaks in Windows
+        self.assertIn(str(configuration.threshold_source), confirmation) # CMP: Fix above        
         worker_args = thread.call_args.kwargs["args"]
         self.assertEqual(worker_args, (host, configuration))
         thread.return_value.start.assert_called_once_with()
